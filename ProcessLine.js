@@ -7,19 +7,21 @@ var c = require('chalk'),
 process.stdin.pipe(require('split')()).on('data', processLine);
 
 var q = async.queue(function(task, callback) {
-    console.log('hello ' + task.line);
+    console.log(c.yellow.bgWhite('hello ' + task.line));
+    
+
+
     callback();
 }, Parallel);
 
 q.drain = function() {
-    console.log('all items have been processed');
+    console.log(c.green.bgWhite('all items have been processed'));
 }
 function processLine(line) {
     if (String(line).length < 1) return;
     q.push({
         line: line
     }, function(err) {
-        console.log('finished processing ', line);
-        console.log(c.red.bgWhite('##  ' + line + '!'));
+        console.log(c.black.bgWhite('finished processing ', line));
     });
 }
