@@ -1,0 +1,27 @@
+{
+  "name": "node-mbuf",
+  "version": "1.0.0",
+  "description": "nodejs mbuffer wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/binRick/node-mbuf"
+  },
+  "author": "Rick Blundell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/binRick/node-mbuf/issues"
+  },
+  "homepage": "https://github.com/binRick/node-mbuf",
+  "dependencies": {
+    "async": "^0.9.0",
+    "chalk": "^1.0.0",
+    "nodemiral": "^1.0.1",
+    "ssh2": "^0.4.6",
+    "trim": "0.0.1",
+    "underscore": "^1.8.3"
+  }
+}
